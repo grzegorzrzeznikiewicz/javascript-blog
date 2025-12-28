@@ -10,6 +10,8 @@
     "init:gitignore": "curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore -o .gitignore",
     "test": "npm-run-all test:*",
     "test:html": "html-validate *.html",
+    "test:js": "eslint --ext .js,.ts .",
+    "test:sass": "stylelint \"sass/**/*.scss\"",
     "build": "npm-run-all build:* test",
     "build:sass": "sass --style=compressed --no-source-map sass:css",
     "build:autoprefixer": "postcss css/*.css --use autoprefixer -d css",
@@ -18,21 +20,27 @@
     "watch": "npm-run-all build build-dev -p watch:*",
     "watch:browsersync": "browser-sync start --server --files \"css/*.css\" \"*.html\" \"js/*.js\"",
     "watch:sassprefixer": "onchange sass/*.scss -- npm run build-dev"
-
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
+    "@eslint/js": "^9.39.2",
     "autoprefixer": "^10.2.4",
     "browser-sync": "^3.0.4",
+    "eslint": "^9.39.2",
+    "globals": "^16.5.0",
     "html-validate": "^10.4.0",
     "mkdirp": "^3.0.1",
     "npm-run-all": "^4.1.5",
     "onchange": "^7.1.0",
     "postcss": "^8.2.6",
     "postcss-cli": "^8.3.1",
-    "sass": "^1.94.2"
+    "sass": "^1.94.2",
+    "stylelint": "^16.26.1",
+    "stylelint-config-standard-scss": "^16.0.0",
+    "stylelint-scss": "^6.13.0",
+    "typescript-eslint": "^8.50.1"
   }
 }
