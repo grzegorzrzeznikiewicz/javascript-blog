@@ -1,7 +1,6 @@
 {
     const titleClickHandler = function (event) {
         event.preventDefault();
-        // eslint-disable-next-line @typescript-eslint/no-this-alias
         const clickedElement = this;
         console.log('Link was clicked!');
         /* [DONE] remove class 'active' from all article links */

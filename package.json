@@ -10,7 +10,7 @@
     "init:gitignore": "curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore -o .gitignore",
     "test": "npm-run-all test:*",
     "test:html": "html-validate *.html",
-    "test:js": "eslint --ext .js,.ts .",
+    "test:js": "eslint js/**/*.js",
     "test:sass": "stylelint \"sass/**/*.scss\"",
     "build": "npm-run-all build:* test",
     "build:sass": "sass --style=compressed --no-source-map sass:css",
@@ -40,7 +40,6 @@
     "sass": "^1.94.2",
     "stylelint": "^16.26.1",
     "stylelint-config-standard-scss": "^16.0.0",
-    "stylelint-scss": "^6.13.0",
-    "typescript-eslint": "^8.50.1"
+    "stylelint-scss": "^6.13.0"
   }
 }
