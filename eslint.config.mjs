@@ -6,7 +6,10 @@ export default [
   {
     files: ["**/*.{js,mjs,cjs}"],
     languageOptions: {
-      globals: globals.browser
+      globals: {
+        ...globals.browser,
+        Handlebars: false,
+      }
     }
   }
 ];
