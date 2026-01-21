@@ -122,3 +122,38 @@ body {
     margin: 0 10px 0 0;
   }
 }
+
+/* Tag cloud */
+
+.tags {
+  a {
+    text-decoration: none;
+    color: $color-dark;
+    margin: 0 5px;
+  }
+}
+
+.tag-size-1 {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.tag-size-2 {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.tag-size-3 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.tag-size-4 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.tag-size-5 {
+  font-size: 20px;
+  font-weight: 800;
+}
